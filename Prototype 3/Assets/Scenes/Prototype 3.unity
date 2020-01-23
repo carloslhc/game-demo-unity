@@ -288,7 +288,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.4, y: 4, z: -15}
+  m_LocalPosition: {x: 9.4, y: 4, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -545,7 +545,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2014335011}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15, y: 0, z: 0}
+  m_LocalPosition: {x: 12.6, y: 0, z: 0}
   m_LocalScale: {x: 5, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -561,11 +561,6 @@ PrefabInstance:
     - target: {fileID: 6142371141657532459, guid: 09c9d551377de7145972312b503b0c8e,
         type: 3}
       propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 6142371141657532459, guid: 09c9d551377de7145972312b503b0c8e,
-        type: 3}
-      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6142371141657560139, guid: 09c9d551377de7145972312b503b0c8e,
@@ -622,26 +617,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6556126025178880355, guid: 09c9d551377de7145972312b503b0c8e,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 122
-      objectReference: {fileID: 0}
-    - target: {fileID: 6556126025178880355, guid: 09c9d551377de7145972312b503b0c8e,
-        type: 3}
-      propertyPath: m_Mass
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 4804298520392973480, guid: 09c9d551377de7145972312b503b0c8e,
-        type: 3}
-      propertyPath: jumpForce
-      value: 700
-      objectReference: {fileID: 0}
-    - target: {fileID: 4804298520392973480, guid: 09c9d551377de7145972312b503b0c8e,
-        type: 3}
-      propertyPath: gravityModifier
-      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09c9d551377de7145972312b503b0c8e, type: 3}
