@@ -22,5 +22,12 @@ public class Enemy : MonoBehaviour
 
         // This is to follow the player normalized is for slow down de force applied in the vector
         enemyRb.AddForce(loodDirection * speed);
+        if (transform.position.y < -10){
+            Destroy(gameObject);
+        }
+        {
+            
+        }
+
     }
 }
