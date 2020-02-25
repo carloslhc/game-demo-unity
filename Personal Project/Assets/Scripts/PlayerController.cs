@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private float speed = 10.0f;
-    public Rigidbody playerRb;
+    private float speed = 110.0f;
+    private Rigidbody playerRb;
     private float zTopLimit = 9.8f;
     private float zBottomLimit = -1.5f; 
 
@@ -37,6 +37,17 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(transform.position.x, transform.position.y, zBottomLimit);
         } else if ( transform.position.z > zTopLimit) {
             transform.position = new Vector3(transform.position.x, transform.position.y, zTopLimit);
+        }
+    }
+    private void OnCollisionEnter(Collision collision){
+        if (collision.gameObject.CompareTag("Enemy")){
+            Debug.Log("Player has collided with the enmey");
+        }
+    }
+    private void OnTriggerEnter(Collider other){
+        if (other.gameObject.CompareTag("Powerup"))
+        {
+            Destroy(other.gameObject);
         }
     }
 }
