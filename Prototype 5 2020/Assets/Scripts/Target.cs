@@ -11,7 +11,7 @@ public class Target : MonoBehaviour
     private float xRange = 4;
     private float ySpawnPos = -2;
     private GameManager gameManager;
-    private AudioSource aus;
+    public AudioSource aus;
 
     public int pointValue = 0;
     public ParticleSystem explosionParticle;
@@ -42,7 +42,7 @@ public class Target : MonoBehaviour
         if (gameManager.isGameActive)
         {
             aus.Play();
-            Destroy(gameObject);
+            Destroy(gameObject, aus.clip.length);
             gameManager.UpdateScore(pointValue);
             Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
         }
