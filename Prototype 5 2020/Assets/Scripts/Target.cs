@@ -11,15 +11,18 @@ public class Target : MonoBehaviour
     private float xRange = 4;
     private float ySpawnPos = -2;
     private GameManager gameManager;
+    private AudioSource aus;
 
     public int pointValue = 0;
     public ParticleSystem explosionParticle;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
         targetRb = GetComponent<Rigidbody>();
+        aus = GetComponent<AudioSource>();
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
 
         targetRb.AddForce(RandomForce(), ForceMode.Impulse);
@@ -38,6 +41,7 @@ public class Target : MonoBehaviour
     private void OnMouseDown(){
         if (gameManager.isGameActive)
         {
+            aus.Play();
             Destroy(gameObject);
             gameManager.UpdateScore(pointValue);
             Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
